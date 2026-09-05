@@ -1,0 +1,472 @@
+---
+import { content } from "../data/content.js";
+
+const { lang = "tr" } = Astro.props;
+
+const t = content[lang];
+
+const isTurkish = lang === "tr";
+
+const currentUrl = isTurkish
+  ? "https://ardacolaker.com/"
+  : "https://ardacolaker.com/en/";
+
+const homeUrl = isTurkish ? "/" : "/en/";
+---
+
+<!DOCTYPE html>
+<html lang={t.lang}>
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Arda Colaker</title>
+
+  <meta
+    name="description"
+    content={
+      isTurkish
+        ? "Arda Colaker'ın kişisel web sitesi, projeleri ve özgeçmişi."
+        : "Arda Colaker's personal website, projects and CV."
+    }
+  />
+
+  <link rel="canonical" href={currentUrl} />
+
+  <link
+    rel="alternate"
+    hreflang="tr"
+    href="https://ardacolaker.com/"
+  />
+
+  <link
+    rel="alternate"
+    hreflang="en"
+    href="https://ardacolaker.com/en/"
+  />
+
+  <link
+    rel="alternate"
+    hreflang="x-default"
+    href="https://ardacolaker.com/"
+  />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+
+<body>
+
+  <a class="skip-link" href="#main">
+    {isTurkish ? "İçeriğe geç" : "Skip to content"}
+  </a>
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="container">
+
+      <nav
+        aria-label={
+          isTurkish
+            ? "Ana navigasyon"
+            : "Main navigation"
+        }
+      >
+
+        <a href={homeUrl} class="logo">
+          Arda Colaker
+        </a>
+
+
+        <div class="nav-right">
+
+          <div class="nav-links">
+
+            <a href="#about">
+              {t.nav.about}
+            </a>
+
+            <a href="#projects">
+              {t.nav.projects}
+            </a>
+
+            <a href="#cv">
+              {t.nav.cv}
+            </a>
+
+            <a href="#contact">
+              {t.nav.contact}
+            </a>
+
+          </div>
+
+
+          <div
+            class="languages"
+            aria-label={
+              isTurkish
+                ? "Dil seçimi"
+                : "Language selector"
+            }
+          >
+
+            <a
+              href="/"
+              class={isTurkish ? "active" : ""}
+              aria-current={isTurkish ? "page" : undefined}
+            >
+              TR
+            </a>
+
+            <span class="language-separator">
+              /
+            </span>
+
+            <a
+              href="/en/"
+              class={!isTurkish ? "active" : ""}
+              aria-current={!isTurkish ? "page" : undefined}
+            >
+              EN
+            </a>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main id="main">
+
+
+    <!-- HERO -->
+
+    <div class="container">
+
+      <div class="hero">
+
+        <div class="eyebrow">
+          {t.hero.eyebrow}
+        </div>
+
+
+        <h1>
+          Arda<br />
+          Colaker.
+        </h1>
+
+
+        <p class="hero-text">
+          {t.hero.description}
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            href="#projects"
+            class="button"
+          >
+            {t.hero.projectsButton}
+          </a>
+
+
+          <a
+            href="https://github.com/acolakera"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button secondary"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+
+        <span class="scroll-hint">
+          {t.hero.scroll}
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-number">
+            {t.about.label}
+          </div>
+
+          <h2>
+            {t.about.title}
+          </h2>
+
+        </div>
+
+
+        <div class="about-text">
+
+          <p>
+            {t.about.text}
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-number">
+            {t.projects.label}
+          </div>
+
+          <h2>
+            {t.projects.title}
+          </h2>
+
+        </div>
+
+
+        <div class="project-grid">
+
+          {
+            t.projects.items.map((project) => (
+
+              <article class="project">
+
+                <span class="project-label">
+                  {project.label}
+                </span>
+
+                <div>
+
+                  <h3>
+                    {project.title}
+                  </h3>
+
+                  <p>
+                    {project.description}
+                  </p>
+
+                </div>
+
+              </article>
+
+            ))
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CV -->
+
+    <section id="cv">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-number">
+            {t.cv.label}
+          </div>
+
+          <h2>
+            {t.cv.title}
+          </h2>
+
+        </div>
+
+
+        <div class="posts">
+
+
+          <div class="post">
+
+            <span class="post-date">
+              {t.cv.experienceLabel}
+            </span>
+
+            <span class="post-title">
+              {t.cv.experience}
+            </span>
+
+            <span class="post-arrow">
+              —
+            </span>
+
+          </div>
+
+
+          <div class="post">
+
+            <span class="post-date">
+              {t.cv.educationLabel}
+            </span>
+
+            <span class="post-title">
+              {t.cv.education}
+            </span>
+
+            <span class="post-arrow">
+              —
+            </span>
+
+          </div>
+
+
+          <div class="post">
+
+            <span class="post-date">
+              {t.cv.skillsLabel}
+            </span>
+
+            <span class="post-title">
+              {t.cv.skills}
+            </span>
+
+            <span class="post-arrow">
+              —
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+        <div
+          class="hero-actions"
+          style="margin-top: 32px;"
+        >
+
+          <a
+            href="/cv.pdf"
+            download="Arda-Colaker-CV.pdf"
+            class="button"
+          >
+            {t.cv.download}
+          </a>
+
+
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button secondary"
+          >
+            {t.cv.view}
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div
+          class="section-number"
+          style="margin-bottom: 34px;"
+        >
+          {t.contact.label}
+        </div>
+
+
+        <h2 class="contact-title">
+          {t.contact.title}
+        </h2>
+
+
+        <div class="contact-links">
+
+          <a
+            href="https://github.com/acolakera"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <span>
+        © 2026 Arda Colaker
+      </span>
+
+
+      <div class="footer-right">
+
+        <a href="#main">
+          {t.footer.top}
+        </a>
+
+        <span>
+          ardacolaker.com
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
