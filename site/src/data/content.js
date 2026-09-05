@@ -2,12 +2,11 @@ export const content = {
   tr: {
     lang: "tr",
 
-    nav: {
-      about: "Hakkımda",
-      projects: "Projects",
-      cv: "CV",
-      contact: "İletişim"
-    },
+nav: {
+  projects: "Projects",
+  cv: "CV",
+  contact: "İletişim"
+},
 
     hero: {
       eyebrow: "Kişisel web sitesi · Portfolio",
@@ -77,12 +76,11 @@ export const content = {
   en: {
     lang: "en",
 
-    nav: {
-      about: "About",
-      projects: "Projects",
-      cv: "CV",
-      contact: "Contact"
-    },
+nav: {
+  projects: "Projects",
+  cv: "CV",
+  contact: "Contact"
+},
 
     hero: {
       eyebrow: "Personal website · Portfolio",
