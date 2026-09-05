@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,327 +18,23 @@
   <link rel="alternate" hreflang="en" href="https://ardacolaker.com/en/">
   <link rel="alternate" hreflang="x-default" href="https://ardacolaker.com/">
 
-  <style>
-    :root {
-      --bg: #090909;
-      --surface: #111111;
-      --text: #f5f5f5;
-      --muted: #929292;
-      --border: #242424;
-      --max-width: 1080px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Helvetica,
-        Arial,
-        sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .container {
-      width: min(var(--max-width), calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(9, 9, 9, 0.88);
-      backdrop-filter: blur(14px);
-    }
-
-    nav {
-      min-height: 82px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .logo {
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .languages {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 13px;
-    }
-
-    .languages a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    .languages .active {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .language-separator {
-      color: #444;
-    }
-
-    .hero {
-      min-height: 75vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 90px 0;
-    }
-
-    .eyebrow {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      max-width: 900px;
-      font-size: clamp(64px, 11vw, 128px);
-      line-height: 0.86;
-      letter-spacing: -0.07em;
-    }
-
-    .hero-text {
-      max-width: 620px;
-      margin-top: 42px;
-      color: var(--muted);
-      font-size: clamp(18px, 2vw, 22px);
-    }
-
-    section {
-      padding: 110px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .section-header {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 60px;
-      margin-bottom: 65px;
-    }
-
-    .section-number {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    h2 {
-      font-size: clamp(36px, 5vw, 58px);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-    }
-
-    .about-text {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 60px;
-    }
-
-    .about-text p {
-      grid-column: 2;
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 19px;
-    }
-
-    .posts {
-      border-top: 1px solid var(--border);
-    }
-
-    .post {
-      display: grid;
-      grid-template-columns: 150px 1fr 40px;
-      align-items: center;
-      gap: 30px;
-      padding: 30px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .post-date {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .post-title {
-      font-size: clamp(20px, 3vw, 27px);
-      font-weight: 500;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .project {
-      min-height: 270px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 30px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-    }
-
-    .project-label {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .project h3 {
-      margin-bottom: 8px;
-      font-size: 27px;
-    }
-
-    .project p {
-      color: var(--muted);
-    }
-
-    .contact-title {
-      margin-bottom: 50px;
-      font-size: clamp(50px, 8vw, 95px);
-      line-height: 0.95;
-      letter-spacing: -0.055em;
-    }
-
-    .button {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 22px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      background: var(--text);
-      color: var(--bg);
-    }
-
-    footer {
-      padding: 40px 0 55px;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    @media (max-width: 700px) {
-      .container {
-        width: min(100% - 28px, var(--max-width));
-      }
-
-      nav {
-        min-height: 68px;
-      }
-
-      .nav-right {
-        gap: 18px;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        min-height: 80vh;
-        padding: 70px 0;
-      }
-
-      section {
-        padding: 80px 0;
-      }
-
-      .section-header,
-      .about-text {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .about-text p {
-        grid-column: 1;
-      }
-
-      .post {
-        grid-template-columns: 1fr;
-      }
-
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-content {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
 
+<a class="skip-link" href="#main">
+  İçeriğe geç
+</a>
+
 <header>
   <div class="container">
-    <nav>
 
-      <a href="/" class="logo">Arda Colaker</a>
+    <nav aria-label="Ana navigasyon">
+
+      <a href="/" class="logo">
+        Arda Colaker
+      </a>
 
       <div class="nav-right">
 
@@ -348,22 +45,32 @@
           <a href="#contact">İletişim</a>
         </div>
 
-        <div class="languages">
-          <a href="/" class="active">TR</a>
+        <div class="languages" aria-label="Dil seçimi">
+
+          <a href="/" class="active" aria-current="page">
+            TR
+          </a>
+
           <span class="language-separator">/</span>
-          <a href="/en/">EN</a>
+
+          <a href="/en/">
+            EN
+          </a>
+
         </div>
 
       </div>
 
     </nav>
+
   </div>
 </header>
 
 
-<main>
+<main id="main">
 
   <div class="container">
+
     <div class="hero">
 
       <div class="eyebrow">
@@ -380,105 +87,182 @@
         ve zaman zaman hayatın içinden notları paylaştığım kişisel alanım.
       </p>
 
+      <div class="hero-actions">
+
+        <a href="#blog" class="button">
+          Yazıları keşfet ↓
+        </a>
+
+        <a
+          href="https://github.com/acolakera"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button secondary"
+        >
+          GitHub ↗
+        </a>
+
+      </div>
+
+      <span class="scroll-hint">
+        Aşağı kaydır
+      </span>
+
     </div>
+
   </div>
 
 
   <section id="about">
+
     <div class="container">
 
       <div class="section-header">
-        <div class="section-number">01 / Hakkımda</div>
+
+        <div class="section-number">
+          01 / Hakkımda
+        </div>
 
         <h2>
           İnternet üzerindeki
           kişisel alanım.
         </h2>
+
       </div>
 
       <div class="about-text">
+
         <p>
           Merhaba, ben Arda. Bu siteyi düşüncelerimi, deneyimlerimi
           ve çalışmalarımı tek bir yerde toplamak için oluşturdum.
           Burada üzerinde çalıştığım projeleri, öğrendiğim şeyleri
           ve paylaşmaya değer bulduğum fikirleri bulabilirsin.
         </p>
+
       </div>
 
     </div>
+
   </section>
 
 
   <section id="blog">
+
     <div class="container">
 
       <div class="section-header">
-        <div class="section-number">02 / Blog</div>
+
+        <div class="section-number">
+          02 / Blog
+        </div>
 
         <h2>
           Son yazılar.
         </h2>
+
       </div>
 
       <div class="posts">
 
         <div class="post">
-          <span class="post-date">Yakında</span>
+
+          <span class="post-date">
+            Yakında
+          </span>
 
           <span class="post-title">
             İlk blog yazısı burada yayınlanacak.
           </span>
+
+          <span class="post-arrow">
+            ↗
+          </span>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
   <section id="projects">
+
     <div class="container">
 
       <div class="section-header">
-        <div class="section-number">03 / Projeler</div>
+
+        <div class="section-number">
+          03 / Projeler
+        </div>
 
         <h2>
           Üzerinde çalıştıklarım.
         </h2>
+
       </div>
 
       <div class="project-grid">
 
-        <div class="project">
-          <span class="project-label">Kişisel Proje</span>
+        <article class="project">
+
+          <span class="project-label">
+            Kişisel proje
+          </span>
 
           <div>
-            <h3>ardacolaker.com</h3>
-            <p>Kişisel web sitem ve blog alanım.</p>
-          </div>
-        </div>
 
-        <div class="project">
-          <span class="project-label">Yakında</span>
+            <h3>
+              ardacolaker.com
+            </h3>
 
-          <div>
-            <h3>Yeni projeler</h3>
             <p>
-              Yeni çalışmalarımı zamanla burada paylaşacağım.
+              Kişisel web sitem, blogum ve internetteki
+              kalıcı alanım.
             </p>
+
           </div>
-        </div>
+
+        </article>
+
+
+        <article class="project">
+
+          <span class="project-label">
+            Yakında
+          </span>
+
+          <div>
+
+            <h3>
+              Yeni projeler
+            </h3>
+
+            <p>
+              Yeni çalışmalarımı ve deneylerimi zamanla
+              burada paylaşacağım.
+            </p>
+
+          </div>
+
+        </article>
 
       </div>
 
     </div>
+
   </section>
 
 
   <section id="contact">
+
     <div class="container">
 
-      <div class="section-number" style="margin-bottom:35px;">
+      <div
+        class="section-number"
+        style="margin-bottom: 34px;"
+      >
         04 / İletişim
       </div>
 
@@ -487,29 +271,48 @@
         kalalım.
       </h2>
 
-      <a
-        href="https://github.com/acolakera"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button"
-      >
-        GitHub ↗
-      </a>
+      <div class="contact-links">
+
+        <a
+          href="https://github.com/acolakera"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button"
+        >
+          GitHub ↗
+        </a>
+
+      </div>
 
     </div>
+
   </section>
 
 </main>
 
 
 <footer>
+
   <div class="container footer-content">
 
-    <span>© 2026 Arda Colaker</span>
+    <span>
+      © 2026 Arda Colaker
+    </span>
 
-    <span>ardacolaker.com</span>
+    <div class="footer-right">
+
+      <a href="#main">
+        Başa dön ↑
+      </a>
+
+      <span>
+        ardacolaker.com
+      </span>
+
+    </div>
 
   </div>
+
 </footer>
 
 </body>
