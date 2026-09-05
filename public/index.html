@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arda Colaker kişisel web sitesi ve blogu." />
+  <title>Arda Colaker</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(900px, 90%);
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+    }
+
+    nav a {
+      color: #bdbdbd;
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .logo {
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 110px 0;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 9vw, 6rem);
+      letter-spacing: -0.05em;
+      line-height: 0.95;
+      margin-bottom: 28px;
+    }
+
+    .intro {
+      color: #aaa;
+      max-width: 600px;
+      font-size: 1.2rem;
+    }
+
+    section {
+      margin-top: 120px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+    }
+
+    .post {
+      border-top: 1px solid #262626;
+      padding: 24px 0;
+    }
+
+    .post:last-child {
+      border-bottom: 1px solid #262626;
+    }
+
+    .post a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.15rem;
+    }
+
+    .post span {
+      display: block;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    footer {
+      padding: 50px 0;
+      border-top: 1px solid #262626;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav .links {
+        display: none;
+      }
+
+      main {
+        padding-top: 80px;
+      }
+
+      section {
+        margin-top: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav>
+      <a class="logo" href="/">Arda Colaker</a>
+
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+
+      <h1>
+        Arda<br />
+        Colaker.
+      </h1>
+
+      <p class="intro">
+        Kişisel web sitem ve düşüncelerimi, çalışmalarımı
+        ve öğrendiklerimi paylaştığım blog.
+      </p>
+
+      <section id="about">
+        <h2>About</h2>
+
+        <p class="intro">
+          Merhaba, ben Arda. Burası internet üzerindeki kişisel alanım.
+          Zamanla projelerimi, notlarımı ve blog yazılarımı burada paylaşacağım.
+        </p>
+      </section>
+
+      <section id="blog">
+        <h2>Blog</h2>
+
+        <div class="post">
+          <a href="#">İlk yazı yakında.</a>
+          <span>2026</span>
+        </div>
+
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+
+        <p class="intro">
+          İletişim bilgileri yakında burada olacak.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2026 Arda Colaker
+    </footer>
+
+  </div>
+
+</body>
+</html>
