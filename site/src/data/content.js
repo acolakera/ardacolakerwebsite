@@ -16,12 +16,7 @@ nav: {
       scroll: "Aşağı kaydır"
     },
 
-    about: {
-      label: "01 / Hakkımda",
-      title: "İnternet üzerindeki kişisel alanım.",
-      text:
-        "Merhaba, ben Arda. Bu siteyi çalışmalarımı, projelerimi ve profesyonel gelişimimi tek bir yerde toplamak için oluşturdum. Burada üzerinde çalıştığım projeleri, deneyimlerimi ve özgeçmişimi bulabilirsin."
-    },
+
 
     projects: {
       label: "02 / Projects",
@@ -90,12 +85,6 @@ nav: {
       scroll: "Scroll down"
     },
 
-    about: {
-      label: "01 / About",
-      title: "My personal corner of the internet.",
-      text:
-        "Hi, I'm Arda. I created this website to bring my work, projects and professional development together in one place. Here you can find the projects I'm working on, my experience and my CV."
-    },
 
     projects: {
       label: "02 / Projects",
