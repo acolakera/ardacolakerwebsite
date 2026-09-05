@@ -4,7 +4,6 @@ import { content } from "../data/content.js";
 const { lang = "tr" } = Astro.props;
 
 const t = content[lang];
-
 const isTurkish = lang === "tr";
 
 const currentUrl = isTurkish
@@ -36,6 +35,8 @@ const homeUrl = isTurkish ? "/" : "/en/";
     }
   />
 
+  <meta name="theme-color" content="#070707" />
+
   <link rel="canonical" href={currentUrl} />
 
   <link
@@ -59,18 +60,13 @@ const homeUrl = isTurkish ? "/" : "/en/";
   <link rel="stylesheet" href="/styles.css" />
 </head>
 
-
 <body>
 
   <a class="skip-link" href="#main">
     {isTurkish ? "İçeriğe geç" : "Skip to content"}
   </a>
 
-
-  <!-- HEADER -->
-
   <header>
-
     <div class="container">
 
       <nav
@@ -84,7 +80,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
         <a href={homeUrl} class="logo">
           Arda Colaker
         </a>
-
 
         <div class="nav-right">
 
@@ -107,7 +102,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
             </a>
 
           </div>
-
 
           <div
             class="languages"
@@ -145,14 +139,10 @@ const homeUrl = isTurkish ? "/" : "/en/";
       </nav>
 
     </div>
-
   </header>
 
 
-  <!-- MAIN -->
-
   <main id="main">
-
 
     <!-- HERO -->
 
@@ -164,17 +154,14 @@ const homeUrl = isTurkish ? "/" : "/en/";
           {t.hero.eyebrow}
         </div>
 
-
         <h1>
           Arda<br />
           Colaker.
         </h1>
 
-
         <p class="hero-text">
           {t.hero.description}
         </p>
-
 
         <div class="hero-actions">
 
@@ -185,6 +172,12 @@ const homeUrl = isTurkish ? "/" : "/en/";
             {t.hero.projectsButton}
           </a>
 
+          <a
+            href="#cv"
+            class="button secondary"
+          >
+            {isTurkish ? "CV'ye git ↓" : "View CV ↓"}
+          </a>
 
           <a
             href="https://github.com/acolakera"
@@ -196,7 +189,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
           </a>
 
         </div>
-
 
         <span class="scroll-hint">
           {t.hero.scroll}
@@ -224,7 +216,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
           </h2>
 
         </div>
-
 
         <div class="about-text">
 
@@ -256,7 +247,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
           </h2>
 
         </div>
-
 
         <div class="project-grid">
 
@@ -311,9 +301,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
 
         </div>
 
-
         <div class="posts">
-
 
           <div class="post">
 
@@ -331,7 +319,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
 
           </div>
 
-
           <div class="post">
 
             <span class="post-date">
@@ -347,7 +334,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
             </span>
 
           </div>
-
 
           <div class="post">
 
@@ -365,13 +351,11 @@ const homeUrl = isTurkish ? "/" : "/en/";
 
           </div>
 
-
         </div>
-
 
         <div
           class="hero-actions"
-          style="margin-top: 32px;"
+          style="margin-top: 34px;"
         >
 
           <a
@@ -381,7 +365,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
           >
             {t.cv.download}
           </a>
-
 
           <a
             href="/cv.pdf"
@@ -412,19 +395,24 @@ const homeUrl = isTurkish ? "/" : "/en/";
           {t.contact.label}
         </div>
 
-
         <h2 class="contact-title">
           {t.contact.title}
         </h2>
 
-
         <div class="contact-links">
+
+          <a
+            href="mailto:acolakera@gmail.com"
+            class="button"
+          >
+            {isTurkish ? "E-posta gönder ↗" : "Send email ↗"}
+          </a>
 
           <a
             href="https://github.com/acolakera"
             target="_blank"
             rel="noopener noreferrer"
-            class="button"
+            class="button secondary"
           >
             GitHub ↗
           </a>
@@ -435,11 +423,8 @@ const homeUrl = isTurkish ? "/" : "/en/";
 
     </section>
 
-
   </main>
 
-
-  <!-- FOOTER -->
 
   <footer>
 
@@ -448,7 +433,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
       <span>
         © 2026 Arda Colaker
       </span>
-
 
       <div class="footer-right">
 
@@ -465,7 +449,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
     </div>
 
   </footer>
-
 
 </body>
 
