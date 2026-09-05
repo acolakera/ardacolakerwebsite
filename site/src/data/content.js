@@ -20,10 +20,6 @@ export const content = {
 
       items: [
         {
-          label: "Personal Website",
-          title: "ardacolaker.com"
-        },
-        {
           label: "Yeni proje",
           title: "Coming soon."
         }
@@ -66,10 +62,6 @@ export const content = {
       title: "Things I'm working on.",
 
       items: [
-        {
-          label: "Personal Website",
-          title: "ardacolaker.com"
-        },
         {
           label: "New project",
           title: "Coming soon."
