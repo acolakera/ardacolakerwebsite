@@ -85,9 +85,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
 
           <div class="nav-links">
 
-            <a href="#about">
-              {t.nav.about}
-            </a>
+           
 
             <a href="#projects">
               {t.nav.projects}
@@ -199,35 +197,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
     </div>
 
 
-    <!-- ABOUT -->
-
-    <section id="about">
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-number">
-            {t.about.label}
-          </div>
-
-          <h2>
-            {t.about.title}
-          </h2>
-
-        </div>
-
-        <div class="about-text">
-
-          <p>
-            {t.about.text}
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
+    
 
 
     <!-- PROJECTS -->
@@ -283,104 +253,39 @@ const homeUrl = isTurkish ? "/" : "/en/";
     </section>
 
 
-    <!-- CV -->
+   <!-- CV -->
 
-    <section id="cv">
+<section id="cv">
 
-      <div class="container">
+  <div class="container">
 
-        <div class="section-header">
+    <div class="section-header">
 
-          <div class="section-number">
-            {t.cv.label}
-          </div>
-
-          <h2>
-            {t.cv.title}
-          </h2>
-
-        </div>
-
-        <div class="posts">
-
-          <div class="post">
-
-            <span class="post-date">
-              {t.cv.experienceLabel}
-            </span>
-
-            <span class="post-title">
-              {t.cv.experience}
-            </span>
-
-            <span class="post-arrow">
-              —
-            </span>
-
-          </div>
-
-          <div class="post">
-
-            <span class="post-date">
-              {t.cv.educationLabel}
-            </span>
-
-            <span class="post-title">
-              {t.cv.education}
-            </span>
-
-            <span class="post-arrow">
-              —
-            </span>
-
-          </div>
-
-          <div class="post">
-
-            <span class="post-date">
-              {t.cv.skillsLabel}
-            </span>
-
-            <span class="post-title">
-              {t.cv.skills}
-            </span>
-
-            <span class="post-arrow">
-              —
-            </span>
-
-          </div>
-
-        </div>
-
-        <div
-          class="hero-actions"
-          style="margin-top: 34px;"
-        >
-
-          <a
-            href="/cv.pdf"
-            download="Arda-Colaker-CV.pdf"
-            class="button"
-          >
-            {t.cv.download}
-          </a>
-
-          <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="button secondary"
-          >
-            {t.cv.view}
-          </a>
-
-        </div>
-
+      <div class="section-number">
+        {t.cv.label}
       </div>
 
-    </section>
+      <h2>
+        CV
+      </h2>
 
+    </div>
+
+    <div class="hero-actions">
+
+      <a
+        href="/cv.pdf"
+        download="Arda-Colaker-CV.pdf"
+        class="button"
+      >
+        {t.cv.download}
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
     <!-- CONTACT -->
 
