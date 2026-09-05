@@ -32,6 +32,7 @@ export const content = {
 
     cv: {
       label: "02 / CV",
+      title: "Curriculum Vitae",
       download: "CV'yi İndir ↓"
     },
 
@@ -78,6 +79,7 @@ export const content = {
 
     cv: {
       label: "02 / CV",
+      title: "Curriculum Vitae",
       download: "Download CV ↓"
     },
 
