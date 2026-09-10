@@ -35,7 +35,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
     }
   />
 
-  <meta name="theme-color" content="#070707" />
+  <meta name="theme-color" content="#010305" />
 
   <link rel="canonical" href={currentUrl} />
 
@@ -66,7 +66,11 @@ const homeUrl = isTurkish ? "/" : "/en/";
     {isTurkish ? "İçeriğe geç" : "Skip to content"}
   </a>
 
+
+  <!-- HEADER -->
+
   <header>
+
     <div class="container">
 
       <nav
@@ -81,11 +85,10 @@ const homeUrl = isTurkish ? "/" : "/en/";
           Arda Colaker
         </a>
 
+
         <div class="nav-right">
 
           <div class="nav-links">
-
-           
 
             <a href="#projects">
               {t.nav.projects}
@@ -100,6 +103,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
             </a>
 
           </div>
+
 
           <div
             class="languages"
@@ -137,10 +141,14 @@ const homeUrl = isTurkish ? "/" : "/en/";
       </nav>
 
     </div>
+
   </header>
 
 
+  <!-- MAIN -->
+
   <main id="main">
+
 
     <!-- HERO -->
 
@@ -152,14 +160,12 @@ const homeUrl = isTurkish ? "/" : "/en/";
           {t.hero.eyebrow}
         </div>
 
+
         <h1>
           Arda<br />
           Colaker.
         </h1>
 
-        <p class="hero-text">
-          {t.hero.description}
-        </p>
 
         <div class="hero-actions">
 
@@ -179,6 +185,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
 
         </div>
 
+
         <span class="scroll-hint">
           {t.hero.scroll}
         </span>
@@ -186,9 +193,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
       </div>
 
     </div>
-
-
-    
 
 
     <!-- PROJECTS -->
@@ -209,6 +213,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
 
         </div>
 
+
         <div class="project-grid">
 
           {
@@ -226,10 +231,6 @@ const homeUrl = isTurkish ? "/" : "/en/";
                     {project.title}
                   </h3>
 
-                  <p>
-                    {project.description}
-                  </p>
-
                 </div>
 
               </article>
@@ -244,39 +245,41 @@ const homeUrl = isTurkish ? "/" : "/en/";
     </section>
 
 
-   <!-- CV -->
+    <!-- CV -->
 
-<section id="cv">
+    <section id="cv">
 
-  <div class="container">
+      <div class="container">
 
-    <div class="section-header">
+        <div class="section-header">
 
-      <div class="section-number">
-        {t.cv.label}
+          <div class="section-number">
+            {t.cv.label}
+          </div>
+
+          <h2>
+            {t.cv.title}
+          </h2>
+
+        </div>
+
+
+        <div class="cv-action">
+
+          <a
+            href="/cv.pdf"
+            download="Arda-Colaker-CV.pdf"
+            class="button"
+          >
+            {t.cv.download}
+          </a>
+
+        </div>
+
       </div>
 
-   <h2>
-  {t.cv.title}
-</h2>
+    </section>
 
-    </div>
-
-    <div class="hero-actions">
-
-      <a
-        href="/cv.pdf"
-        download="Arda-Colaker-CV.pdf"
-        class="button"
-      >
-        {t.cv.download}
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
 
     <!-- CONTACT -->
 
@@ -291,28 +294,72 @@ const homeUrl = isTurkish ? "/" : "/en/";
           {t.contact.label}
         </div>
 
+
         <h2 class="contact-title">
           {t.contact.title}
         </h2>
 
+
         <div class="contact-links">
 
+          <!-- LINKEDIN -->
+
           <a
-            href="mailto:acolakera@gmail.com"
-            class="button"
+            href="https://www.linkedin.com/in/ardacolaker"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icon-button"
+            aria-label="LinkedIn"
+            title="LinkedIn"
           >
-            {isTurkish ? "E-posta gönder ↗" : "Send email ↗"}
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill="currentColor"
+                d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.03 2.03 0 0 0 3.2 5.03c0 1.1.9 2.02 2.02 2.02h.03a2.03 2.03 0 1 0 0-4.05ZM20.44 12.44c0-3.44-1.84-5.04-4.3-5.04-1.98 0-2.87 1.09-3.37 1.86V8.5H9.39c.04.5 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.12-.92.27-.68.89-1.38 1.93-1.38 1.36 0 1.9 1.04 1.9 2.57V20H20.1v-6.56Z"
+              />
+            </svg>
+
           </a>
 
-      
+
+          <!-- GITHUB -->
+
+          <a
+            href="https://github.com/acolakera"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icon-button"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill="currentColor"
+                d="M12 .7C5.7.7.6 5.8.6 12.1c0 5 3.3 9.3 7.8 10.8.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.1v3.2c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.8C23.4 5.8 18.3.7 12 .7Z"
+              />
+            </svg>
+
+          </a>
+
         </div>
 
       </div>
 
     </section>
 
+
   </main>
 
+
+  <!-- FOOTER -->
 
   <footer>
 
@@ -321,6 +368,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
       <span>
         © 2026 Arda Colaker
       </span>
+
 
       <div class="footer-right">
 
@@ -337,6 +385,7 @@ const homeUrl = isTurkish ? "/" : "/en/";
     </div>
 
   </footer>
+
 
 </body>
 
