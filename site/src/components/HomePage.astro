@@ -166,24 +166,30 @@ const homeUrl = isTurkish ? "/" : "/en/";
           Colaker.
         </h1>
 
+<div class="hero-actions">
 
-        <div class="hero-actions">
+  <a
+    href="#projects"
+    class="button"
+  >
+    {t.hero.projectsButton}
+  </a>
 
-          <a
-            href="#projects"
-            class="button"
-          >
-            {t.hero.projectsButton}
-          </a>
+  <a
+    href="#cv"
+    class="button secondary"
+  >
+    {isTurkish ? "CV'ye git ↓" : "View CV ↓"}
+  </a>
 
-          <a
-            href="#cv"
-            class="button secondary"
-          >
-            {isTurkish ? "CV'ye git ↓" : "View CV ↓"}
-          </a>
+  <a
+    href="#contact"
+    class="button secondary"
+  >
+    {isTurkish ? "İletişim ↓" : "Contact ↓"}
+  </a>
 
-        </div>
+</div>
 
 
         <span class="scroll-hint">
