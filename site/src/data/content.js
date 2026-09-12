@@ -20,8 +20,9 @@ export const content = {
 
       items: [
         {
-          label: "Yeni proje",
-          title: "Coming soon."
+          label: "Finans · AI",
+          title: "AI Stocks",
+          href: "https://stocks.ardacolaker.com"
         }
       ]
     },
@@ -63,8 +64,9 @@ export const content = {
 
       items: [
         {
-          label: "New project",
-          title: "Coming soon."
+          label: "Finance · AI",
+          title: "AI Stocks",
+          href: "https://stocks.ardacolaker.com"
         }
       ]
     },
