@@ -21,8 +21,8 @@ export const content = {
       items: [
         {
           label: "Finans · AI",
-          title: "AI Stocks",
-          href: "https://stocks.ardacolaker.com"
+          title: "Monetarium",
+          href: "https://monetarium.ardacolaker.com"
         }
       ]
     },
@@ -65,8 +65,8 @@ export const content = {
       items: [
         {
           label: "Finance · AI",
-          title: "AI Stocks",
-          href: "https://stocks.ardacolaker.com"
+          title: "Monetarium",
+          href: "https://monetarium.ardacolaker.com"
         }
       ]
     },
